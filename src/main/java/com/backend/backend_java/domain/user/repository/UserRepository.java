@@ -7,4 +7,5 @@ import java.util.UUID;
 
 public interface UserRepository extends JpaRepository<User, UUID> {
     User findByNickname(String nickname);
+    Boolean existsByNickname(String nickname);
 }

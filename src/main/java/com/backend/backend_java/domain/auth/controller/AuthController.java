@@ -1,7 +1,9 @@
 package com.backend.backend_java.domain.auth.controller;
 
 import com.backend.backend_java.domain.auth.dto.request.LoginRequest;
+import com.backend.backend_java.domain.auth.dto.request.NicknameRequest;
 import com.backend.backend_java.domain.auth.dto.request.SignupRequest;
+import com.backend.backend_java.domain.auth.service.CheckNicknameService;
 import com.backend.backend_java.domain.auth.service.LoginService;
 import com.backend.backend_java.domain.auth.service.SignupService;
 import lombok.RequiredArgsConstructor;
@@ -23,6 +25,8 @@ public class AuthController {
 
     private final LoginService loginService;
 
+    private final CheckNicknameService checkNicknameService;
+
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/signup")
     public void signup(@RequestBody @Valid SignupRequest request) {
@@ -33,5 +37,11 @@ public class AuthController {
     @PostMapping("/login")
     public void login(@RequestBody @Valid LoginRequest request) {
         loginService.login(request);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/check-nickname")
+    public void checkNickname(@RequestBody @Valid NicknameRequest request) {
+        checkNicknameService.checkNickname(request);
     }
 }

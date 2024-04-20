@@ -1,5 +1,6 @@
-package com.backend.backend_java.feed.controller.dto.response;
+package com.backend.backend_java.feed.controller;
 
+import com.backend.backend_java.feed.controller.dto.response.QueryAllFeedResponse;
 import com.backend.backend_java.feed.service.QueryAllFeedService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

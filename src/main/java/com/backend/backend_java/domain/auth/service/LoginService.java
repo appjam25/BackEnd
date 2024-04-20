@@ -1,8 +1,8 @@
 package com.backend.backend_java.domain.auth.service;
 
 import com.backend.backend_java.domain.auth.dto.request.LoginRequest;
-import com.backend.backend_java.domain.auth.user.entity.User;
-import com.backend.backend_java.domain.auth.user.repository.UserRepository;
+import com.backend.backend_java.domain.user.entity.User;
+import com.backend.backend_java.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

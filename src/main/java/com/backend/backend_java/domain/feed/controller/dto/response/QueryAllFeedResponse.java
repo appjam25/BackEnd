@@ -1,7 +1,6 @@
-package com.backend.backend_java.feed.controller.dto.response;
+package com.backend.backend_java.domain.feed.controller.dto.response;
 
-import com.backend.backend_java.feed.domain.Feed;
-import lombok.AllArgsConstructor;
+import com.backend.backend_java.domain.feed.entity.Feed;
 import lombok.Builder;
 import lombok.Getter;
 

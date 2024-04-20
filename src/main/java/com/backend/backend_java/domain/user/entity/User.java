@@ -1,4 +1,4 @@
-package com.backend.backend_java.domain.auth.user.entity;
+package com.backend.backend_java.domain.user.entity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -33,8 +33,8 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "name", nullable = false)
-    private String name;
+    @Column(name = "address", nullable = false)
+    private String address;
 
     @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;

@@ -16,7 +16,7 @@ public class SignupRequest {
     private String password;
 
     @NotBlank
-    private String name;
+    private String address;
 
     @NotNull
     private LocalDate birthDate;

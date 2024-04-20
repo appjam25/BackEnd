@@ -1,7 +1,7 @@
-package com.backend.backend_java.feed.service;
+package com.backend.backend_java.domain.feed.service;
 
-import com.backend.backend_java.feed.controller.dto.response.QueryAllFeedResponse;
-import com.backend.backend_java.feed.domain.repository.FeedRepository;
+import com.backend.backend_java.domain.feed.controller.dto.response.QueryAllFeedResponse;
+import com.backend.backend_java.domain.feed.repository.FeedRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

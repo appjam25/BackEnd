@@ -1,4 +1,4 @@
-package com.backend.backend_java.feed.domain;
+package com.backend.backend_java.domain.feed.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

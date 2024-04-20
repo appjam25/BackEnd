@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,23 +17,18 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Builder
 public class Feed {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
-    private String username;
+    @Column(name = "restaurant_name", nullable = false)
+    private String restaurantName;
 
-    private String title;
+    @Column(name = "writer_name", nullable = false)
+    private String writerName;
 
+    @Column(name = "content", nullable = false)
     private String content;
-
-    private String imageUrl;
-
-    private String tag;
-
-    private String place;
-
-    private Integer people;
-
-    private Integer personnel;
 }

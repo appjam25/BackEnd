@@ -1,5 +1,6 @@
 package com.backend.backend_java.domain.post.controller;
 
+import com.backend.backend_java.domain.auth.dto.request.NicknameRequest;
 import com.backend.backend_java.domain.post.dto.request.PostRequest;
 import com.backend.backend_java.domain.post.dto.response.AllPostResponse;
 import com.backend.backend_java.domain.post.service.QueryAllPostService;
@@ -33,7 +34,7 @@ public class PostController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping("/all-post")
-    public List<AllPostResponse> queryAllPost() {
-        return queryAllPostService.queryAllPost();
+    public List<AllPostResponse> queryAllPost(@RequestBody @Valid NicknameRequest request) {
+        return queryAllPostService.queryAllPost(request);
     }
 }

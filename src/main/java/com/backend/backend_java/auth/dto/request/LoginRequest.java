@@ -1,7 +1,8 @@
 package com.backend.backend_java.auth.dto.request;
 
-import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
+
+import javax.validation.constraints.NotBlank;
 
 @Getter
 public class LoginRequest {

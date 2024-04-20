@@ -1,10 +1,10 @@
 package com.backend.backend_java.auth.dto.request;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 
-import java.time.LocalDateTime;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 
 @Getter
 public class SignupRequest {
@@ -19,5 +19,5 @@ public class SignupRequest {
     private String name;
 
     @NotNull
-    private LocalDateTime birthDate;
+    private LocalDate birthDate;
 }

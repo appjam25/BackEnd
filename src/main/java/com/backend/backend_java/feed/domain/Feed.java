@@ -2,6 +2,7 @@ package com.backend.backend_java.feed.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -31,4 +33,6 @@ public class Feed {
     private String place;
 
     private Integer people;
+
+    private Integer personnel;
 }

@@ -1,6 +1,5 @@
 package com.backend.backend_java.domain.post.dto.response;
 
-import com.backend.backend_java.domain.user.entity.User;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -24,7 +23,7 @@ public class PostInfoResponse {
 
     private Integer maxPeople;
 
-    private List<User> applyPeople;
+    private List<PostUserResponse> applyPeople;
 
     private String restaurantName;
 }

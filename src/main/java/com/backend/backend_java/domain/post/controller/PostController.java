@@ -43,7 +43,7 @@ public class PostController {
 
     @ResponseStatus(HttpStatus.OK)
     @PostMapping("/apply-post")
-    public void applyPost(ApplyRequest request) {
+    public void applyPost(@RequestBody @Valid ApplyRequest request) {
         applyPostService.apply(request);
     }
 
@@ -54,7 +54,7 @@ public class PostController {
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping("/post-info")
+    @GetMapping("/post-info/{postId}")
     public PostInfoResponse postInfo(@PathVariable Long postId) {
         return postInfoService.postInfo(postId);
     }

@@ -41,7 +41,7 @@ public class Post {
     private String menu;
 
     @Column(name = "max_people", nullable = false)
-    private Integer maxPeople = 0;
+    private Integer maxPeople;
 
     @Column(name = "restaurant_name", nullable = false)
     private String restaurantName;

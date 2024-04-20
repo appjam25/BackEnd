@@ -1,4 +1,4 @@
-name: gradle-prod
+name: gradle
 
 on:
     push:

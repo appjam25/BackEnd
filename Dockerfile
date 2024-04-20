@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk
+FROM openjdk:19-jdk
 
 ARG PROFILE
 ENV PROFILE ${PROFILE}

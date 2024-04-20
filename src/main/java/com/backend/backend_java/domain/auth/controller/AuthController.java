@@ -1,5 +1,6 @@
 package com.backend.backend_java.domain.auth.controller;
 
+import com.backend.backend_java.domain.auth.dto.reponse.LoginResponse;
 import com.backend.backend_java.domain.auth.dto.request.LoginRequest;
 import com.backend.backend_java.domain.auth.dto.request.NicknameRequest;
 import com.backend.backend_java.domain.auth.dto.request.SignupRequest;
@@ -35,8 +36,8 @@ public class AuthController {
 
     @ResponseStatus(HttpStatus.OK)
     @PostMapping("/login")
-    public void login(@RequestBody @Valid LoginRequest request) {
-        loginService.login(request);
+    public LoginResponse login(@RequestBody @Valid LoginRequest request) {
+        return loginService.login(request);
     }
 
     @ResponseStatus(HttpStatus.OK)

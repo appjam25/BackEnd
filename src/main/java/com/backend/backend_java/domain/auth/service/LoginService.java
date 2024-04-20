@@ -1,7 +1,7 @@
 package com.backend.backend_java.domain.auth.service;
 
+import com.backend.backend_java.domain.auth.dto.reponse.LoginResponse;
 import com.backend.backend_java.domain.auth.dto.request.LoginRequest;
-import com.backend.backend_java.domain.user.entity.User;
 import com.backend.backend_java.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ public class LoginService {
 
     private final UserRepository userRepository;
 
-    public void login(LoginRequest request) {
-        User user = userRepository.findByNickname(request.getNickname());
+    public LoginResponse login(LoginRequest request) {
+        return new LoginResponse(userRepository.findByNickname(request.getNickname()).getNickname());
     }
 }

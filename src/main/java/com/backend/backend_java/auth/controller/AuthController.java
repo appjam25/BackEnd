@@ -1,6 +1,8 @@
 package com.backend.backend_java.auth.controller;
 
+import com.backend.backend_java.auth.dto.request.LoginRequest;
 import com.backend.backend_java.auth.dto.request.SignupRequest;
+import com.backend.backend_java.auth.service.LoginService;
 import com.backend.backend_java.auth.service.SignupService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -18,9 +20,17 @@ public class AuthController {
 
     private final SignupService signupService;
 
+    private final LoginService loginService;
+
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/signup")
     public void signup(@RequestBody @Valid SignupRequest request) {
         signupService.signup(request);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/login")
+    public void login(@RequestBody @Valid LoginRequest request) {
+        loginService.login(request);
     }
 }

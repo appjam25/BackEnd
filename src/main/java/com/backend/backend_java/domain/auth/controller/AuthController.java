@@ -1,9 +1,9 @@
-package com.backend.backend_java.auth.controller;
+package com.backend.backend_java.domain.auth.controller;
 
-import com.backend.backend_java.auth.dto.request.LoginRequest;
-import com.backend.backend_java.auth.dto.request.SignupRequest;
-import com.backend.backend_java.auth.service.LoginService;
-import com.backend.backend_java.auth.service.SignupService;
+import com.backend.backend_java.domain.auth.dto.request.LoginRequest;
+import com.backend.backend_java.domain.auth.dto.request.SignupRequest;
+import com.backend.backend_java.domain.auth.service.LoginService;
+import com.backend.backend_java.domain.auth.service.SignupService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;

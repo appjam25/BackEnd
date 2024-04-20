@@ -1,4 +1,4 @@
-package com.backend.backend_java.auth.dto.request;
+package com.backend.backend_java.domain.auth.dto.request;
 
 import lombok.Getter;
 

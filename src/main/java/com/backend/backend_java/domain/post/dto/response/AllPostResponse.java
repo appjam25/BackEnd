@@ -8,6 +8,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public class AllPostResponse {
 
+    private Long postId;
+
     private String writerNickname;
 
     private String postName;
@@ -22,7 +24,10 @@ public class AllPostResponse {
 
     private Integer applyPeople;
 
+    private Boolean isApply = false;
+
     public AllPostResponse(Post post) {
+        postId = post.getId();
         writerNickname = post.getWriterNickname();
         postName = post.getPostName();
         content = post.getContent();
@@ -30,5 +35,9 @@ public class AllPostResponse {
         menu = post.getMenu();
         maxPeople = post.getMaxPeople();
         applyPeople = post.getMembers().size();
+    }
+
+    public void apply() {
+        isApply = true;
     }
 }

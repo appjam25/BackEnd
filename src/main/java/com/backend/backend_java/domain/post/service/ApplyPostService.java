@@ -6,6 +6,7 @@ import com.backend.backend_java.domain.post.repository.PostRepository;
 import com.backend.backend_java.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -15,9 +16,10 @@ public class ApplyPostService {
 
     private final UserRepository userRepository;
 
+    @Transactional
     public void apply(ApplyRequest request) {
         Post post = postRepository.findById(request.getPostId())
-                .orElseThrow(IllegalAccessError::new);
+                        .orElseThrow(IllegalAccessError::new);
 
         post.addMember(userRepository.findByNickname(request.getNickname()));
     }

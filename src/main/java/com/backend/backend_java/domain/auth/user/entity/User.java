@@ -1,4 +1,4 @@
-package com.backend.backend_java.user.entity;
+package com.backend.backend_java.domain.auth.user.entity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

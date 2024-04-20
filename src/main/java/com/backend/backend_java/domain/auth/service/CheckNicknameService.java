@@ -12,6 +12,6 @@ public class CheckNicknameService {
     private final UserRepository userRepository;
 
     public void checkNickname(NicknameRequest request) {
-        if(userRepository.existsByNickname(request.getNickname())) throw new RuntimeException("중복되는 닉네임입니다.");
+        if(userRepository.existsByNickname(request.getNickname())) throw new IllegalArgumentException("에러");
     }
 }

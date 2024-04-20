@@ -9,6 +9,9 @@ import javax.validation.constraints.NotNull;
 public class PostRequest {
 
     @NotBlank
+    private String writerNickname;
+
+    @NotBlank
     private String title;
 
     @NotBlank

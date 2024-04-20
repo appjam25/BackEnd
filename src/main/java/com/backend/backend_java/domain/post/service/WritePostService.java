@@ -15,6 +15,7 @@ public class WritePostService {
     public void writePost(PostRequest request) {
         postRepository.save(
                 Post.builder()
+                        .writerNickname(request.getWriterNickname())
                         .postName(request.getTitle())
                         .content(request.getContent())
                         .area(request.getArea())

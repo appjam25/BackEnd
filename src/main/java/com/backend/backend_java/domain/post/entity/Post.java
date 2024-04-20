@@ -28,6 +28,9 @@ public class Post {
     @Column(name = "id", unique = true, nullable = false)
     private Long id;
 
+    @Column(name = "writer_nickname", nullable = false)
+    private String writerNickname;
+
     @Column(name = "post_name", nullable = false)
     private String postName;
 

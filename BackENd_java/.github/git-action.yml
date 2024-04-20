@@ -1,4 +1,4 @@
-name: gradle-pick-prod
+name: gradle-prod
 
 on:
   push:

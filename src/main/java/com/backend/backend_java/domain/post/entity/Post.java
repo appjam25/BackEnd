@@ -51,4 +51,8 @@ public class Post {
 
     @OneToMany
     private List<User> members = new ArrayList<>();
+
+    public void addMember(User user) {
+        members.add(user);
+    }
 }

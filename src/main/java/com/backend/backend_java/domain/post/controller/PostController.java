@@ -1,9 +1,11 @@
 package com.backend.backend_java.domain.post.controller;
 
 import com.backend.backend_java.domain.auth.dto.request.NicknameRequest;
+import com.backend.backend_java.domain.post.dto.request.ApplyRequest;
 import com.backend.backend_java.domain.post.dto.request.PostRequest;
 import com.backend.backend_java.domain.post.dto.response.AllPostResponse;
 import com.backend.backend_java.domain.post.dto.response.PostInfoResponse;
+import com.backend.backend_java.domain.post.service.ApplyPostService;
 import com.backend.backend_java.domain.post.service.PostInfoService;
 import com.backend.backend_java.domain.post.service.QueryAllPostService;
 import com.backend.backend_java.domain.post.service.WritePostService;
@@ -27,6 +29,8 @@ public class PostController {
 
     private final WritePostService writePostService;
 
+    private final ApplyPostService applyPostService;
+
     private final QueryAllPostService queryAllPostService;
 
     private final PostInfoService postInfoService;
@@ -35,6 +39,12 @@ public class PostController {
     @PostMapping("/write")
     public void writePost(@RequestBody @Valid PostRequest request) {
         writePostService.writePost(request);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/apply-post")
+    public void applyPost(ApplyRequest request) {
+        applyPostService.apply(request);
     }
 
     @ResponseStatus(HttpStatus.OK)

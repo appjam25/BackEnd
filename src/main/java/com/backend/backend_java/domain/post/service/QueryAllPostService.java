@@ -8,6 +8,7 @@ import com.backend.backend_java.domain.user.entity.User;
 import com.backend.backend_java.domain.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,6 +21,7 @@ public class QueryAllPostService {
 
     private final PostRepository postRepository;
 
+    @Transactional
     public List<AllPostResponse> queryAllPost(NicknameRequest request) {
         User user = userRepository.findByNickname(request.getNickname());
 
